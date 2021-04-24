@@ -1,0 +1,81 @@
+.parent{
+    background: #FF512F;
+    background: -webkit-linear-gradient(to right , #DD2426 , #FF512F );
+    background: linear-gradient(to right , #dd2476 , #FF512F);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    width: 50%;
+    height: 350px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 6px 6px 8px rgba(0,0,0,0.5);
+}
+
+.heading{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(118,32,70);
+    color: rgb(255, 255, 255);
+    border-radius: 5px 5px 0 0;
+    margin: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
+.timer{
+    font-family: 'Teko' , sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    padding: 30px 0px;
+}
+
+.hour, .min , .sec , .millisec{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgb(63,21,40);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+
+}
+
+.action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action button{
+    font-size: larger;
+    width: 70px;
+    line-height: 3rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(63,21,40);
+    margin: 2px;
+    transition: all .5s;
+}
+
+.start:hover{
+    background-color: green;
+}
+.stop:hover{
+    background-color: red;
+}
+.reset:hover{
+    background-color: yellow;
+}
