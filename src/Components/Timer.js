@@ -54,10 +54,12 @@ const Timer = () => {
   function runTheClock() {
     updatedTime = new Date();
     updatedTime = updatedTime.getTime();
-    difference =  updatedTime - startTime;
-    if (savedTime > 0){ 
+    
+    if (savedTime){ 
       difference = (updatedTime - startTime) + savedTime;
-    } 
+    }else{
+      difference =  updatedTime - startTime;
+    }
     var hours = Math.floor(
       (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
@@ -81,7 +83,7 @@ const Timer = () => {
   const handleReset = () => {
     clearInterval(timer);
     setMillisec("00");
-    setSec("00");
+    setSec("00`");
     setMin("00");
     setHr("00");
   };
