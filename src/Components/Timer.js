@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import useApp from "../App";
 import Interact from "./Interact";
 
@@ -7,9 +7,10 @@ let timer;
 let startTime;
 let updatedTime;
 let difference;
-let savedTime; 
-
 const Timer = () => {
+
+  const [ savedTime , setSavedTime] = useState(0)
+
   const {
     millisec,
     setMillisec,
@@ -55,7 +56,7 @@ const Timer = () => {
     updatedTime = new Date();
     updatedTime = updatedTime.getTime();
     
-    if (savedTime){ 
+    if (savedTime > 0){ 
       difference = (updatedTime - startTime) + savedTime;
     }else{
       difference =  updatedTime - startTime;
@@ -77,16 +78,18 @@ const Timer = () => {
   }
   
   const handleStop = () => {
-    savedTime = difference;
+    setSavedTime(difference)
     clearInterval(timer);  
   };
   const handleReset = () => {
+    difference = 0
+    setSavedTime(difference)
     clearInterval(timer);
     setMillisec("00");
     setSec("00");
     setMin("00");
     setHr("00");
-    savedTime = 0
+    
   };
 
   return (
