@@ -80,10 +80,10 @@ const Timer = () => {
   };
   const handleReset = () => {
     clearInterval(timer);
-    setMillisec(0);
-    setSec(0);
-    setMin(0);
-    setHr(0);
+    setMillisec("00");
+    setSec("00");
+    setMin("00");
+    setHr("00");
   };
 
   return (
