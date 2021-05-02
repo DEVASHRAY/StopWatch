@@ -86,7 +86,7 @@ const Timer = () => {
     setSec("00");
     setMin("00");
     setHr("00");
-    savedTime = null
+    savedTime = 0
   };
 
   return (
