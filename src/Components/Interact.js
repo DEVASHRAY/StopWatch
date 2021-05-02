@@ -5,13 +5,13 @@ const Interact = (props) => {
   return (
     <>
       <div className="action">
-        <button class="start" onClick={props.handleStart}>
+        <button className="start" onClick={props.handleStart}>
           Start
         </button>
-        <button class="stop" onClick={props.handleStop}>
+        <button className="stop" onClick={props.handleStop}>
           Stop
         </button>
-        <button class="reset" onClick={props.handleReset}>
+        <button className="reset" onClick={props.handleReset}>
           Reset
         </button>
       </div>
