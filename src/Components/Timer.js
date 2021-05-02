@@ -83,7 +83,7 @@ const Timer = () => {
   const handleReset = () => {
     clearInterval(timer);
     setMillisec("00");
-    setSec("00`");
+    setSec("00");
     setMin("00");
     setHr("00");
   };
